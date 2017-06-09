@@ -11,6 +11,7 @@ namespace MvcMusicStoreFirst
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(new MvcMusicStoreFirst.DAL.SampleData());
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
